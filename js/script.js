@@ -142,7 +142,7 @@ function displayMealDetailsById(mealsByIdList) {
     `;
   dataRow.innerHTML = result;
 }
-
+// --------------Search------------
 function displaySearchInputs() {
   let searchInputResult = `
     <div class="row py-4">
@@ -208,7 +208,7 @@ function displayMealsByCategory(mealsByCategoryList) {
   }
   dataRow.innerHTML = result;
 }
-
+//---------Category----------
 async function filterMealsByCategory(categoryName) {
   closeNavIfOpen();
   $(".inner-loading-screen").fadeIn(300);
@@ -221,6 +221,7 @@ async function filterMealsByCategory(categoryName) {
   $(".inner-loading-screen").fadeOut(300);
 }
 
+// -----------Area------------
 async function getMealsByArea() {
   $(".inner-loading-screen").fadeIn(300);
   let mealsByAreaAPI = await fetch(
@@ -361,6 +362,7 @@ function contactForm() {
                 </div>   
     `;
   dataRow.innerHTML = result;
+  // ----------RegexForContatc------------
   const nameInput = document.getElementById("nameInput");
   const emailInput = document.getElementById("emailInput");
   const phoneInput = document.getElementById("phoneInput");
